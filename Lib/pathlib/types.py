@@ -184,11 +184,11 @@ class _JoinablePath(ABC):
             return self.with_name(stem + suffix)
 
     def without_suffix(self):
-        """Return a new path without the file suffix.  Readable alternative 
+        """Return a new path without the file suffix.  Readable alternative
         for providing empty string to with_suffix.
         """
         return self.with_suffix('')
-    
+
     @property
     def parts(self):
         """An object providing sequence-like access to the
