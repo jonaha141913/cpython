@@ -1188,8 +1188,8 @@ class TestUopsOptimization(unittest.TestCase):
             attr = 1
 
         res, ex = self._run_with_optimizer(thing, Foo())
-        opnames = list(iter_opnames(ex))
         self.assertIsNotNone(ex)
+        opnames = list(iter_opnames(ex))
         self.assertEqual(res, TIER2_THRESHOLD * 2)
         guard_type_version_count = opnames.count("_GUARD_TYPE_VERSION")
         self.assertEqual(guard_type_version_count, 1)
